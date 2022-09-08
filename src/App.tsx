@@ -1,8 +1,11 @@
+import { Navbar } from './components/Navbar/Navbar';
+
 function App() {
   return (
-    <div className='font-bold text-sm text-black '>
-      Hello my first app on Typescript
-    </div>
+    <>
+      <Navbar />
+      
+    </>
   );
 }
 
