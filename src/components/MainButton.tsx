@@ -21,7 +21,7 @@ export const MainButton = ({
   const btnFontSizeClass = fontSize ? fontSize : 'text-sm';
 
   const btnClasses = [
-    'bg-blue_primary text-white font-bold rounded-[4px] hover:opacity-90 delay-75',
+    'bg-blue_primary text-white font-bold rounded-[4px] hover:opacity-90 duration-75 whitespace-nowrap',
     btnPxClass,
     btnPyClass,
     btnFontSizeClass,
