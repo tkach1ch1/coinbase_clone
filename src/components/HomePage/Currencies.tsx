@@ -55,7 +55,7 @@ export const Currencies = () => {
               alt={elem.name}
             />
             <div className='lsm:flex lsm:gap-2 '>
-              <div className='text-lg font-semibold text-gray100 '>
+              <div className='text-lg font-semibold text-main_black '>
                 {elem.name}
               </div>
               <div className='text-lg  font-semibold text-gray60 opacity-60 '>
@@ -65,10 +65,10 @@ export const Currencies = () => {
           </a>
           <div className='lsm:flex lsm:gap-12 '>
             <div className='flex gap-1 items-center'>
-              <span className='text-xl text-gray100 font-semibold opacity-90'>
+              <span className='text-xl text-main_black font-semibold opacity-90'>
                 $
               </span>
-              <div className='pr-12 flex text-lg text-gray100 font-semibold opacity-90'>
+              <div className='pr-12 flex text-lg text-main_black font-semibold opacity-90'>
                 {(+elem.price).toFixed(2)}
               </div>
             </div>

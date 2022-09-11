@@ -4,7 +4,7 @@ import coinbase_app from '../../images/jpeg_png/coinbase_app.png';
 
 export const TitleSection = () => {
   return (
-    <section className='flex justify-between container max-w-[1198px] sm:px-6 smm:px-14 py-6 '>
+    <section className='flex justify-between container max-w-mainWidth sm:px-6 smm:px-14 py-6 '>
       <div className='flex flex-col py-[100px] mdm:max-w-[480px]'>
         <LinkToPortfolio />
         <div className='font-bold leading-tight sm:text-[34px] smm:text-[62px] sm:pt-3'>

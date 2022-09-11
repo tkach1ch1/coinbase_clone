@@ -1,13 +1,23 @@
-import { EarnSection } from '../components/HomePage/EarnSection';
+import { CreatePortfolioSection } from '../components/HomePage/CreatePortfolioSection';
+import { FirstEarnCoinsSection } from '../components/HomePage/FirstEarnCoinsSection';
+import { GetStartedSection } from '../components/HomePage/GetStartedSection';
+import { SecondEarnCoinsSection } from '../components/HomePage/SecondEarnCoinsSection';
+import { StatisticSection } from '../components/HomePage/StatisticSection';
 import { TitleSection } from '../components/HomePage/TitleSection';
 import { TopCurrenciesTable } from '../components/HomePage/TopCurrenciesTable';
+import { WhyCoinbaseSection } from '../components/HomePage/WhyCoinbaseSection';
 
 export const Home = () => {
   return (
     <div>
       <TitleSection />
       <TopCurrenciesTable />
-      <EarnSection />
+      <FirstEarnCoinsSection />
+      <CreatePortfolioSection />
+      <WhyCoinbaseSection />
+      <StatisticSection />
+      <GetStartedSection />
+      <SecondEarnCoinsSection />
     </div>
   );
 };
