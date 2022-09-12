@@ -27,9 +27,11 @@ module.exports = {
         main_black: '#0A0B0D',
         green_positive: 'rgb(9,133,81)',
         red_negative: 'rgb(207,32,47)',
-        gray0: 'rgb(255,255,255)',
-        gray60: 'rgb( 91,97,110)',
-        gray100: 'rgb(245,248,255)',
+        main_gray: 'rgb( 91,97,110)',
+        gray60: 'rgba(91, 97, 110, 0.6)',
+        gray90: 'rgba(91, 97, 110, 0.9)',
+        light_gray: 'rgb(245,248,255)',
+        white60: 'rgba(255, 255, 255, 0.7)'
       },
       maxWidth: {
         mainWidth: '1198px',

@@ -7,7 +7,7 @@ export const CreatePortfolioSection = () => {
         <div className='text-center text-[40px] font-bold mb-3'>
           Create your cryptocurrency portfolio today
         </div>
-        <div className='text-center text-gray60 mb-16'>
+        <div className='text-center text-main_gray mb-16'>
           Coinbase has a variety of features that make it the best place to
           start trading
         </div>

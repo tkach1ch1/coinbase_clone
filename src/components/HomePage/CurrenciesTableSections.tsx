@@ -1,5 +1,5 @@
 export const CurrenciesTableSections = () => {
-  const tableSectionClass = 'text-[14px] text-gray60 pr-12';
+  const tableSectionClass = 'text-[14px] text-main_gray pr-12';
 
   const rankSectionClass = [tableSectionClass, 'pr-10, pl-8'];
 

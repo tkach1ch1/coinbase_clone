@@ -11,7 +11,7 @@ export const WhyCoinbaseSection = () => {
           <div className='text-[40px] font-bold text-center mb-4'>
             The most trusted cryptocurrency platform
           </div>
-          <div className='text-gray60 text-center text-lg'>
+          <div className='text-main_gray text-center text-lg'>
             Here are a few reasons why you should choose Coinbase
           </div>
         </div>
@@ -22,7 +22,7 @@ export const WhyCoinbaseSection = () => {
             <img src={safe} alt='sign' />
           </div>
           <span className='text-[20px] font-semibold'>Secure storage</span>
-          <span className='text-gray60'>
+          <span className='text-main_gray'>
             We store the vast majority of the digital assets in secure offline
             storage.
           </span>
@@ -39,7 +39,7 @@ export const WhyCoinbaseSection = () => {
           <span className='text-[20px] font-semibold'>
             Protected by insurance
           </span>
-          <span className='text-gray60'>
+          <span className='text-main_gray'>
             Coinbase maintains crypto insurance and all USD cash balances are
             covered by FDIC insurance, up to a maximum of $250,000.
           </span>
@@ -56,7 +56,7 @@ export const WhyCoinbaseSection = () => {
           <span className='text-[20px] font-semibold '>
             Industry best practices
           </span>
-          <span className='text-gray60'>
+          <span className='text-main_gray'>
             Coinbase supports a variety of the most popular digital currencies.
           </span>
           <CustomTooltip content='Learn how your crypto is covered by our insurance policy'>

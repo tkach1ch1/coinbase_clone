@@ -5,11 +5,11 @@ export const Footer = () => {
   const linkClass = 'hover:text-blue_primary hover:underline';
 
   return (
-    <div className='container max-w-mainWidth px-6 py-[100px]'>
+    <footer className='container max-w-mainWidth px-6 py-[100px]'>
       <div className='flex flex-col gap-5'>
         <img src={logo} alt='coinbase_logo' className='w-[112px] h-[20px]' />
-        <span className='text-gray60 font-medium'>@ 2022 Coinbase</span>
-        <div className='flex font-medium text-gray60 gap-1'>
+        <span className='text-main_gray font-medium'>@ 2022 Coinbase</span>
+        <div className='flex font-medium text-main_gray gap-1'>
           <CustomTooltip content='The Coinbase blog'>
             <a href='https://blog.coinbase.com/' className={linkClass}>
               Blog
@@ -29,6 +29,6 @@ export const Footer = () => {
           </CustomTooltip>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

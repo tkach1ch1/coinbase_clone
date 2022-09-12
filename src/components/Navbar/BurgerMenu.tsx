@@ -4,37 +4,35 @@ import arrow_down from '../../images/svg/arrow_down.svg';
 import arrow_up from '../../images/svg/arrow_up.svg';
 
 export const BurgerMenu = () => {
-  const [open, setOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [section, setSection] = useState(false);
 
-  const topLineClickedStyle = open
+  const topLineClickedStyle = isNavOpen
     ? 'flex w-[18px] h-[2px] bg-black absolute top-0 left-0  transition-all delay-[50] translate-y-[8px] rotate-45 '
     : 'flex w-[18px] h-[2px] bg-black absolute top-0 left-0 transition-all delay-75';
 
-  const middleLineClickedStyle = open
+  const middleLineClickedStyle = isNavOpen
     ? 'flex w-[18px] h-[2px] bg-black absolute opacity-0 transition-easy delay-75 '
     : 'flex w-[18px] h-[2px] bg-black absolute top-[8px] left-0 transition-all delay-75';
 
-  const bottomLineClickedStyle = open
+  const bottomLineClickedStyle = isNavOpen
     ? 'flex w-[18px] h-[2px] bg-black absolute bottom-0 left-0 transition-all delay-[50] translate-y-[-8px] -rotate-45'
     : 'flex w-[18px] h-[2px] bg-black absolute bottom-0 left-0 transition-all delay-75 ';
 
   return (
     <>
       <div
-        onClick={() => setOpen(!open)}
-        className='w-[18px] h-[18px] relative  lgm:hidden cursor-pointer '
+        onClick={() => setIsNavOpen(!isNavOpen)}
+        className='w-[18px] h-[18px] relative lgm:hidden cursor-pointer'
       >
         <span className={topLineClickedStyle}></span>
         <span className={middleLineClickedStyle}></span>
         <span className={bottomLineClickedStyle}></span>
       </div>
-      {open ? (
+      {isNavOpen && (
         <>
-          <div className='absolute flex flex-col left-0 bottom-0 top-14 z-10 w-full px-5 py-6 gap-8 font-bold text-base text-black bg-white'>
-            <a id='#' href='/'>
-              Explore
-            </a>
+          <div className='fixed flex flex-col left-0 top-14 w-full h-full px-5 py-6 gap-8 font-bold text-base bg-white overflow-auto'>
+            <a href='/'>Explore</a>
 
             <div className='flex justify-between'>
               <div className='cursor-default'>Learn</div>
@@ -93,13 +91,13 @@ export const BurgerMenu = () => {
               >
                 Get started
               </MainButton>
-              <button className='msm:max-w-[300px] p-4 text-base text-blue_primary hover:border-white duration-100 border-2 border-blue_primary rounded '>
+              <button className='msm:max-w-[300px] p-4 text-base text-blue_primary hover:border-white duration-100 border-2 border-blue_primary rounded mb-16'>
                 Sign in
               </button>
             </div>
           </div>
         </>
-      ) : null}
+      )}
     </>
   );
 };

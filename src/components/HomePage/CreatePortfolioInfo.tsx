@@ -21,7 +21,7 @@ export const CreatePortfolioInfo = () => {
           </div>
           <div className={textContainerClass}>
             <span className='text-xl font-bold'>Manage your portfolio</span>
-            <span className='text-gray60'>
+            <span className='text-main_gray'>
               Buy and sell popular digital currencies, keep track of them in the
               one place.
             </span>

@@ -2,8 +2,8 @@ import { MainButton } from '../MainButton';
 
 export const EarnSectionInfo = () => {
   return (
-    <div className='flex flex-col w-[350px] ms:w-full ms:text-center'>
-      <span className='font-bold text-[32px] text-main_black pb-4'>
+    <div className='flex flex-col max-w-[350px] ms:w-full ms:text-center'>
+      <span className='font-bold text-[32px] pb-4'>
         Earn up to $19 worth of crypto
       </span>
       <span className='text-sm pb-4'>

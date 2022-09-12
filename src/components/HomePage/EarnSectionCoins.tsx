@@ -45,11 +45,11 @@ export const EarnSectionCoins = () => {
   );
 
   return (
-    <div className=' ms:w-full'>
+    <div className='ms:w-full'>
       <div className='ms:border-[1px] ms:mb-4 mb-4'>
         {earnCoinsArray.map((elem: coinsProps) => (
           <div
-            className='p-[24px] ms:p-4 flex justify-between items-center gap-20 hover:shadow-inner cursor-pointer hover:duration-500 easy-out ms:border-b-[1px] '
+            className='p-[24px] ms:p-4 flex justify-between items-center gap-20 hover:shadow-xl hover:scale-1.2 cursor-pointer hover:duration-500  ms:border-b-[1px] '
             key={elem.uuid}
           >
             <div className='flex items-center gap-3'>
@@ -58,10 +58,10 @@ export const EarnSectionCoins = () => {
                 alt={elem.name}
                 className='w-[38px] h-[38px]'
               />
-              <span className='font-bold text-[22px] text-main_black whitespace-nowrap ms:w-[60px] ms:whitespace-normal'>
+              <span className='font-bold text-[22px] whitespace-nowrap ms:w-[60px] ms:whitespace-normal'>
                 {elem.name}
               </span>
-              <span className='font-semibold text-[18px] text-main_black ms:hidden'>
+              <span className='font-semibold text-[18px] ms:hidden'>
                 {elem.symbol}
               </span>
             </div>
@@ -71,7 +71,9 @@ export const EarnSectionCoins = () => {
           </div>
         ))}
       </div>
-      <a href='#' className='ml-6  text-blue_primary font-semibold'>View more &gt;</a>
+      <a href='#' className='ml-6  text-blue_primary font-semibold'>
+        View more &gt;
+      </a>
     </div>
   );
 };

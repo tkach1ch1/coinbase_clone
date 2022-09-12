@@ -13,7 +13,7 @@ export const GetStartedSection = () => {
         <div className='text-[40px] font-bold mb-3'>
           Get started in a few minutes
         </div>
-        <div className='text-gray60'>
+        <div className='text-main_gray'>
           Coinbase supports a variety of the most popular digital currencies.
         </div>
       </div>
@@ -25,7 +25,7 @@ export const GetStartedSection = () => {
           <div className={cardTitle}>Create an account</div>
         </div>
 
-        <div className='h-[1px] w-[130px] mt-10 bg-gray60 sm:hidden'></div>
+        <div className='h-[1px] w-[130px] mt-10 bg-main_gray sm:hidden'></div>
 
         <div className={cardContainer}>
           <div>
@@ -34,7 +34,7 @@ export const GetStartedSection = () => {
           <div className={cardTitle}>Link your bank account</div>
         </div>
 
-        <div className='h-[1px] w-[130px] mt-10 bg-gray60 sm:hidden'></div>
+        <div className='h-[1px] w-[130px] mt-10 bg-main_gray sm:hidden'></div>
 
         <div className={cardContainer}>
           <div>

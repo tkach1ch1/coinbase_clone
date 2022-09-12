@@ -1,7 +1,7 @@
 export const StatisticSection = () => {
   const titleClass = ' text-[56px] font-bold text-white';
 
-  const subTitleClass = 'text-white opacity-70';
+  const subTitleClass = 'text-white60';
 
   return (
     <section className='  bg-blue_primary p-6'>

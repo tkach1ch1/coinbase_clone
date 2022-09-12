@@ -8,7 +8,7 @@ export const SecondEarnCoinsSection = () => {
   };
 
   return (
-    <div className=' bg-gray100 h-[460px] flex ms:block ms:h-[320px]'>
+    <div className=' bg-light_gray h-[460px] flex ms:block ms:h-[320px]'>
       <div className='basis-2/3 flex justify-center items-center pl-10 ms:pl-0 ms:w-[320px] ms:mx-auto pt-12'>
         <EarnSectionInfo />
       </div>
