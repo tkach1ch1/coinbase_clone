@@ -14,7 +14,7 @@ export const CreatePortfolioSection = () => {
         <div className='flex justify-between xl:flex-wrap-reverse xl:justify-center mb-12'>
           <CreatePortfolioInfo />
 
-          <div>
+          <div className='sm:mb-12'>
             <img
               src='https://assets.coinbase.com/assets/coinbase-app.3b0bfd4cb6b7a7614c1e18472187f6b9.webp'
               alt='coinbase_app'
