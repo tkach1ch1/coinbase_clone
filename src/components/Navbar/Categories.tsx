@@ -2,7 +2,7 @@ import { CustomTooltip } from '../CustomTooltip';
 
 export const Categories = () => {
   const categoriesSelectionClass = [
-    'h-full flex items-center border-b-4 pt-[4px] border-transparent delay-75 hover:border-blue_primary mx-6',
+    'h-full flex items-center border-b-4 pt-[4px] border-transparent delay-75 hover:border-blue_primary mx-4',
   ];
 
   return (

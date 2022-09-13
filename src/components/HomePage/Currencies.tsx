@@ -1,46 +1,23 @@
 import { useEffect, useState } from 'react';
+import { useAllCryptCurrencies } from '../../hooks/useAllCryptCurrencies';
+
+type coinsProps = {
+  rank: string;
+  iconUrl: string;
+  name: string;
+  price: string;
+  change: string;
+  uuid: string;
+  symbol: string;
+};
 
 export const Currencies = () => {
-  const [coins, setCoins] = useState([]);
-
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': '08b795fc6cmsh33e69a1b4bb9e2dp114290jsn9f3f6475889d',
-      'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-    },
-  };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&orderBy=marketCap&orderDirection=desc&limit=4&offset=0',
-          options
-        );
-        const fetchedData = await response.json();
-        setCoins(fetchedData.data.coins);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  type coinsProps = {
-    rank: string;
-    iconUrl: string;
-    name: string;
-    price: string;
-    change: string;
-    uuid: string;
-    symbol: string;
-  };
+   
+  const {coins} = useAllCryptCurrencies()
 
   return (
     <>
-      {coins.map((elem: coinsProps) => (
+      {coins.slice(0,4).map((elem: coinsProps) => (
         <div
           className='flex gap-[70px] py-4 border-t-[1px] border-[rgba(text-main_gray,0.2) hover:bg-gray-100 hover:duration-500 sm:gap-0'
           key={elem.uuid}

@@ -31,7 +31,7 @@ export const BurgerMenu = () => {
       </div>
       {isNavOpen && (
         <>
-          <div className='fixed flex flex-col left-0 top-14 w-full h-full px-5 py-6 gap-8 font-bold text-base bg-white overflow-auto'>
+          <div className='fixed flex flex-col left-0 top-14 w-full h-full px-5 py-6 gap-8 font-bold text-base bg-white overflow-auto z-[1000]'>
             <a href='/'>Explore</a>
 
             <div className='flex justify-between'>
