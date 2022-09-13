@@ -9,7 +9,7 @@ import { WhyCoinbaseSection } from '../components/HomePage/WhyCoinbaseSection';
 
 export const Home = () => {
   return (
-    <div>
+    <main>
       <TitleHomeSection />
       <TopCurrenciesTable />
       <FirstEarnCoinsSection />
@@ -18,6 +18,6 @@ export const Home = () => {
       <StatisticSection />
       <GetStartedSection />
       <SecondEarnCoinsSection />
-    </div>
+    </main>
   );
 };

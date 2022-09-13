@@ -4,6 +4,7 @@ module.exports = {
 
   theme: {
     screens: {
+      xxl: {min: '1700px'},
       xl: { max: '1140px' },
       lg: { max: '1040px' },
       lgm: { min: '1040px' },
@@ -30,6 +31,7 @@ module.exports = {
         main_gray: 'rgb( 91,97,110)',
         gray60: 'rgba(91, 97, 110, 0.6)',
         gray90: 'rgba(91, 97, 110, 0.9)',
+        gray_button: 'rgb(238,240,243)',
         light_gray: 'rgb(245,248,255)',
         white60: 'rgba(255, 255, 255, 0.7)'
       },

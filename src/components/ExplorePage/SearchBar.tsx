@@ -7,7 +7,7 @@ export const SearchBar = () => {
   const [focusSearch, setFocusSearch] = useState(false);
 
   //By clicking outside a search bar it changes a search sign back to default color
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = () => setFocusSearch(false);
 
