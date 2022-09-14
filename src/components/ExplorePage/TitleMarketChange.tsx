@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useMcapChange } from '../../hooks/useMcapChange';
-import { Skeleton } from '../Skeleton';
 import { MarketCapChange } from './MarketCapChange';
 
 export const TitleMarketChange = () => {

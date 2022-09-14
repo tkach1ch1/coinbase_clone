@@ -10,7 +10,7 @@ export const CryptoPricesTitle = () => {
   const timeArray = ['1H', '1D', '1W', '1M', '1Y'];
 
   return (
-    <div className='flex justify-between'>
+    <div className='flex justify-between mb-3'>
       <div className='flex gap-2 items-center'>
         <div className='text-[28px] font-bold top-[2px]'>Crypto prices</div>
         <div className='relative top-[5px]'>

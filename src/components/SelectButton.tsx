@@ -20,14 +20,13 @@ export const SelectButton = ({ listArray, label }: selectButtonProps) => {
   useClickOutside(ref, handleClickOutside);
 
   return (
-    <div className='relative'>
+    <div className='relative' ref={ref}>
       {/* Button */}
       <button
         onClick={() => {
           setOpenSelect(!openSelect);
         }}
         className='flex justify-around items-center gap-1 px-4 p-2 rounded-full bg-gray_button border-none cursor-pointer hover:opacity-80'
-        ref={ref}
       >
         <div className='text-sm font-semibold'>{selectedProp}</div>
         {/* On toggle openSelect changes arrows */}
@@ -48,19 +47,13 @@ export const SelectButton = ({ listArray, label }: selectButtonProps) => {
 
       {/* Select area */}
       {openSelect && (
-        <ul
-          className='w-[300px] absolute border right-0 top-[40px] rounded-md overflow-hidden'
-          ref={ref}
-        >
+        <ul className='w-[300px] absolute border right-0 top-[40px] rounded-md overflow-hidden'>
           {listArray.map((elem: string) => (
-            <li
-              key={Math.floor(Math.random() * 1000)}
-              onClick={() => {
-                setSelectedProp(elem);
-                setOpenSelect(false);
-              }}
-            >
-                {/* Finding selected element in array and highlight it in selected area*/}
+            <li key={Math.floor(Math.random() * 1000)} onClick ={() => {
+              setSelectedProp(elem)
+              setOpenSelect(false)
+            }}>
+              {/* Finding selected element in array and highlight it in selected area*/}
               {selectedProp === elem ? (
                 <div className='px-4 py-3 hover:bg-light_gray cursor-pointer font-bold bg-gray_button'>
                   <div className='flex justify-between '>
