@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+ 
 
 export const useGlobalStats = () => {
-  const [totalCoins, setTotalCoins] = useState('');
+  const [totalCoins, setTotalCoins] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
+
 
   const options = {
     method: 'GET',

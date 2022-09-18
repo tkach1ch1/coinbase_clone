@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useAllCryptCurrencies } from '../../hooks/useAllCryptCurrencies';
 
 type coinsProps = {
@@ -9,8 +8,7 @@ type coinsProps = {
 };
 
 export const EarnSectionCoins = () => {
-  
-  const {coins} = useAllCryptCurrencies()
+  const { coins } = useAllCryptCurrencies();
 
   const earnCoinsArray = coins.filter(
     (elem: coinsProps) =>

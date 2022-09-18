@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useAllCryptCurrencies } from '../../hooks/useAllCryptCurrencies';
 
 type coinsProps = {
@@ -14,6 +13,8 @@ type coinsProps = {
 export const Currencies = () => {
    
   const {coins} = useAllCryptCurrencies()
+
+  console.log(coins)
 
   return (
     <>

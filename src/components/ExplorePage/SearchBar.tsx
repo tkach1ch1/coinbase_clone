@@ -13,7 +13,6 @@ export const SearchBar = () => {
 
   useClickOutside(ref, handleClickOutside);
 
-
   return (
     <div
       onClick={() => setFocusSearch(true)}

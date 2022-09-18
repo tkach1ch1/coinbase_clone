@@ -20,7 +20,7 @@ export const SelectButton = ({ listArray, label }: selectButtonProps) => {
   useClickOutside(ref, handleClickOutside);
 
   return (
-    <div className='relative' ref={ref}>
+    <div className='relative ' ref={ref}>
       {/* Button */}
       <button
         onClick={() => {
@@ -47,12 +47,15 @@ export const SelectButton = ({ listArray, label }: selectButtonProps) => {
 
       {/* Select area */}
       {openSelect && (
-        <ul className='w-[300px] absolute border right-0 top-[40px] rounded-md overflow-hidden'>
+        <ul className='w-[300px] absolute border right-0 top-[40px] rounded-md overflow-hidden bg-white'>
           {listArray.map((elem: string) => (
-            <li key={Math.floor(Math.random() * 1000)} onClick ={() => {
-              setSelectedProp(elem)
-              setOpenSelect(false)
-            }}>
+            <li
+              key={Math.floor(Math.random() * 1000)}
+              onClick={() => {
+                setSelectedProp(elem);
+                setOpenSelect(false);
+              }}
+            >
               {/* Finding selected element in array and highlight it in selected area*/}
               {selectedProp === elem ? (
                 <div className='px-4 py-3 hover:bg-light_gray cursor-pointer font-bold bg-gray_button'>

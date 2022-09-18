@@ -19,7 +19,7 @@ function App() {
       <Route path='/explore/s/losers' element={<Losers />} />
     </Routes>
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

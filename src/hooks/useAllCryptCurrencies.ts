@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { Coin } from '../types/Coin';
 
 export const useAllCryptCurrencies = () => {
-    const [coins, setCoins] = useState([]);
+  const [coins, setCoins] = useState<Coin[] | []>([]);
 
   const options = {
     method: 'GET',
@@ -15,7 +16,7 @@ export const useAllCryptCurrencies = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&orderBy=marketCap&orderDirection=desc&limit=100&offset=0',
+          'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&orderBy=marketCap&orderDirection=desc&limit=50&offset=0',
           options
         );
         const fetchedData = await response.json();
@@ -28,5 +29,5 @@ export const useAllCryptCurrencies = () => {
     fetchData();
   }, []);
 
-  return {coins}
+  return { coins };
 };
