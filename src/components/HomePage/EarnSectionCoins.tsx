@@ -1,27 +1,15 @@
-import { useAllCryptCurrencies } from '../../hooks/useAllCryptCurrencies';
+import { useEarnFreeCoins } from "../../hooks/useEarnFreeCoins";
 
-type coinsProps = {
-  symbol: string;
-  iconUrl: string;
-  name: string;
-  uuid: string;
-};
+
 
 export const EarnSectionCoins = () => {
-  const { coins } = useAllCryptCurrencies();
-
-  const earnCoinsArray = coins.filter(
-    (elem: coinsProps) =>
-      elem.symbol === 'NEAR' ||
-      elem.symbol === 'SAND' ||
-      elem.symbol === 'GAL' ||
-      elem.symbol === 'ADA'
-  );
+  
+  const {earnCoinsArray} = useEarnFreeCoins()
 
   return (
     <div className='ms:w-full'>
       <div className='ms:border-[1px] ms:mb-4 mb-4'>
-        {earnCoinsArray.map((elem: coinsProps) => (
+        {earnCoinsArray.map((elem) => (
           <div
             className='p-[24px] ms:p-4 flex justify-between items-center gap-20 hover:shadow-xl hover:scale-1.2 cursor-pointer hover:duration-500  ms:border-b-[1px] '
             key={elem.uuid}

@@ -9,23 +9,36 @@ export const CryptoCurrenciesAssetsTable = () => {
 
   const { numberConvert } = useShorthandConversion();
 
+  const tableHeaderThClass = 'text-right py-2 text-sm text-gray90';
+
+  const tableHeaderDivClass = 'py-2 px-4 hover:bg-light_gray';
+
+  const tableBodyTdClass = 'text-right py-2 px-4 font-semibold'
+
   return (
     <div className='p-4'>
       <table className='w-full'>
         <thead>
           <tr>
-            <th className='text-left text-sm text-gray90 px-4 py-2'>
-              <div className='py-2 hover:bg-light_gray'>Name</div>
+            <th className='text-left text-sm text-gray90 px-[-16px] py-2'>
+              <div className={tableHeaderDivClass}>Name</div>
             </th>
-            <th className='text-right py-2 px-4 text-sm text-gray90'>Price</th>
-            <th className='text-right py-2 px-4 text-sm text-gray90'>Change</th>
-            <th className='text-right py-2 px-4 text-sm text-gray90'>
-              Market cap
+            <th className={tableHeaderThClass}>
+              <div className={tableHeaderDivClass}>Price</div>
             </th>
-            <th className='text-right py-2 px-4 text-sm text-gray90'>
-              Volume (24h)
+
+            <th className={tableHeaderThClass}>
+              <div className={tableHeaderDivClass}>Change</div>
             </th>
-            <th className='text-right py-2 px-4 text-sm text-gray90'>Supply</th>
+            <th className={tableHeaderThClass}>
+              <div className={tableHeaderDivClass}>Market cap</div>
+            </th>
+            <th className={tableHeaderThClass}>
+              <div className='py-2 px-4'>Volume (24h)</div>
+            </th>
+            <th className={tableHeaderThClass}>
+              <div className='py-2 px-4'>Supply</div>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -57,11 +70,11 @@ export const CryptoCurrenciesAssetsTable = () => {
                     </div>
                   </div>
                 </td>
-                <td className='text-right py-2 px-4 font-semibold'>
+                <td className={tableBodyTdClass}>
                   ${Number(coin.price).toFixed(2)}
                 </td>
 
-                <td className='text-right py-2 px-4 font-semibold  '>
+                <td className={tableBodyTdClass}>
                   {Number(coin.change) > 0 ? (
                     <div className='flex justify-end items-center'>
                       <img src={arrow_green} alt='arrow_green' />
@@ -70,18 +83,18 @@ export const CryptoCurrenciesAssetsTable = () => {
                   ) : (
                     <div className='flex justify-end items-center'>
                       <img src={arrow_red} alt='arrow_red' />
-                      <div className='text-red_negative'>{coin.change}%</div>
+                      <div className='text-red_negative'>{Math.abs(Number(coin.change))}%</div>
                     </div>
                   )}
                 </td>
 
-                <td className='text-right py-2 px-4 font-semibold'>
+                <td className={tableBodyTdClass}>
                   $ {numberConvert(coin.marketCap)}
                 </td>
-                <td className='text-right py-2 px-4 font-semibold'>
+                <td className={tableBodyTdClass}>
                   {coin['24hVolume']}
                 </td>
-                <td className='text-right py-2 px-4 font-semibold'>34344334</td>
+                <td className={tableBodyTdClass}>34344334</td>
               </tr>
             ))}
         </tbody>

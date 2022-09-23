@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
- 
+
+import { GlobalCoin } from '../types/GlobalCoin';
 
 export const useGlobalStats = () => {
-  const [totalCoins, setTotalCoins] = useState(null);
+  const [totalCoins, setTotalCoins] = useState(0);
+  const [newestCoins, setNewestCoins] = useState<GlobalCoin[] | []>([]);
+  const [bestCoins, setBestCoins] = useState<GlobalCoin[] | [] >([]);
 
   const [isLoading, setIsLoading] = useState(false);
-
 
   const options = {
     method: 'GET',
@@ -16,23 +18,26 @@ export const useGlobalStats = () => {
   };
 
   useEffect(() => {
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        setTimeout(async () => {
-          const response = await fetch(
-            'https://coinranking1.p.rapidapi.com/stats?referenceCurrencyUuid=yhjMzLPhuIDl',
-            options
-          );
-          const fetchedData = await response.json();
+
+        const response = await fetch(
+          'https://coinranking1.p.rapidapi.com/stats?referenceCurrencyUuid=yhjMzLPhuIDl',
+          options
+        );
+        const fetchedData = await response.json();
+        setTimeout(() => {
           setTotalCoins(fetchedData.data.totalCoins);
           setIsLoading(false);
         }, 1000);
+        setNewestCoins(fetchedData.data.newestCoins);
+        setBestCoins(fetchedData.data.bestCoins);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
   }, []);
-  return { isLoading, totalCoins };
+  return { isLoading, totalCoins, newestCoins, bestCoins };
 };

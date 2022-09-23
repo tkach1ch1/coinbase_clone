@@ -11,14 +11,11 @@ type coinsProps = {
 };
 
 export const Currencies = () => {
-   
-  const {coins} = useAllCryptCurrencies()
-
-  console.log(coins)
+  const { coins } = useAllCryptCurrencies();
 
   return (
     <>
-      {coins.slice(0,4).map((elem: coinsProps) => (
+      {coins.slice(0, 4).map((elem: coinsProps) => (
         <div
           className='flex gap-[70px] py-4 border-t-[1px] border-[rgba(text-main_gray,0.2) hover:bg-gray-100 hover:duration-500 sm:gap-0'
           key={elem.uuid}
