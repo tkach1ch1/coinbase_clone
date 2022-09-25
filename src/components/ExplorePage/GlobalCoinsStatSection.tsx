@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useEarnFreeCoins } from '../../hooks/useEarnFreeCoins';
 import { useGlobalStats } from '../../hooks/useGlobalStats';
-import { usePreveous } from '../../hooks/usePreveous';
+import { usePreveous } from '../../hooks/usePrevious';
 import { GlobalCoinsStatsContainer } from './GlobalCoinsStatsContainer';
 
 export const GlobalCoinsStatSection = () => {
-  const { newestCoins } = useGlobalStats();
-  const { bestCoins } = useGlobalStats();
+  const { newestCoins, bestCoins } = useGlobalStats();
   const { earnCoinsArray } = useEarnFreeCoins();
 
   const [offset, setOffset] = useState(0);
@@ -28,16 +27,22 @@ export const GlobalCoinsStatSection = () => {
       : prev > offset && window.innerHeight > 792
       ? 'sticky bottom-[-90px]'
       : prev < offset && window.innerHeight < 793
-      ? 'sticky top-[-220px]'
+      ? 'sticky top-[-230px]'
       : prev > offset && window.innerHeight < 793
-      ? 'sticky bottom-[-220px] scroll-mb-[100px]'
+      ? 'sticky bottom-[-230px]'
       : '';
 
-  const mtClass = prev < offset ? ' mt-0' : prev > offset ? 'mt-[3500px]' : '';
+  const mtClass = prev < offset ? 'mt-0' : prev > offset ? 'mt-[3500px]' : '';
+  const helpDivClass = ['xlm:hidden', mtClass];
+
+  const containerInfoClass = [
+    'xlm:flex xlm:justify-between xlm:border-y',
+    offsetClass,
+  ];
 
   return (
-    <div className={offsetClass}>
-      <div className={mtClass}></div>
+    <div className={containerInfoClass.join(' ')}>
+      <div className={helpDivClass.join(' ')}></div>
       <GlobalCoinsStatsContainer
         coinsArray={newestCoins}
         sectionInfo={'Newest on Coinbase'}
@@ -52,6 +57,7 @@ export const GlobalCoinsStatSection = () => {
         coinsArray={earnCoinsArray}
         sectionInfo={'Free crypto'}
         coinAdditionalInfo={'Earn 3$'}
+        hidden={true}
       />
     </div>
   );

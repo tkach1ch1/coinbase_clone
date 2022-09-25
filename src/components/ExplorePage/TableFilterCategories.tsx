@@ -22,7 +22,7 @@ export const TableFilterCategories = () => {
         </a>
       </li>
 
-      <li>
+      <li className='ms:hidden'>
         <a href='/explore/s/gainers' className={liClass}>
           <div className={imgMainClass}>
             <img src={star} alt='star' />
@@ -32,7 +32,7 @@ export const TableFilterCategories = () => {
         </a>
       </li>
 
-      <li>
+      <li className='ms:hidden'>
         <a href='/explore/s/losers' className={liClass}>
           <div className={imgMainClass}>
             <img

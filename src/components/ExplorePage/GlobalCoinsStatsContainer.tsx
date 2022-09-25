@@ -4,15 +4,21 @@ type CoinsProps = {
   coinsArray: GlobalCoin[];
   sectionInfo: string;
   coinAdditionalInfo: string;
+  hidden?: boolean;
 };
 
 export const GlobalCoinsStatsContainer = ({
   coinsArray,
   sectionInfo,
   coinAdditionalInfo,
+  hidden
 }: CoinsProps) => {
+
+  const hiddenSection = hidden ? 'py-8 border-b xlm:hidden' : 'py-8 border-b'
+
+  const sectionContainer = ['xlm:w-full xlm:border-r', hiddenSection]
   return (
-    <div className='py-8 border-b'>
+    <div className={sectionContainer.join(' ')}>
       <h3 className='text-xl font-bold px-6 pb-2'>{sectionInfo}</h3>
       {coinsArray.map((coin) => (
         <div className='px-6 py-2 ' key={coin.uuid}>

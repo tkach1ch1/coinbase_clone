@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 export const usePreveous = (value: number) => {
-  const ref = useRef(0);
+  const ref:any = useRef();
   useEffect(() => {
     ref.current = value;
-  });
+  }, [value]);
   return ref.current;
 };

@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     screens: {
       xxl: { min: '1700px' },
+      xlm: {max: '1245px'},
+      xlms: {min: '1246px'},
       xl: { max: '1140px' },
       lg: { max: '1040px' },
       lgm: { min: '1040px' },
@@ -13,6 +15,7 @@ module.exports = {
       md: { max: '815px' },
       mdm: { min: '815px' },
       ms: { max: '767px' },
+      mss: {min: '767px'},
       msm: { min: '600px' },
       sm: { max: '560px' },
       smm: { min: '560px' },
